@@ -1,0 +1,89 @@
+{
+  "name": "WebApp - Spring Boot 3",
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
+      "upgradePackages": true
+    },
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+      "plugins": "ssh-agent npm",
+      "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+      "username": "root"
+    },
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "DotJoshJohnson.xml",
+        "esbenp.prettier-vscode",
+        "vscjava.vscode-maven",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-java-test",
+        "ms-azuretools.vscode-docker",
+        "humao.rest-client",
+        "shengchen.vscode-checkstyle",
+        "ryanluker.vscode-coverage-gutters",
+        "Pleiades.java-extension-pack-jdk",
+        "vscjava.vscode-spring-initializr",
+        "TabNine.tabnine-vscode",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.github-vscode-theme",
+        "GitHub.vscode-github-actions",
+        "vscjava.vscode-java-docs",
+        "vscjava.vscode-java-dependency",
+        "formulahendry.code-runner",
+        "vscjava.vscode-spring-boot-dashboard",
+        "vmware.vscode-spring-boot",
+        "intellsmi.comment-translate",
+        "aaron-bond.better-comments",
+        "tanaka-x.prop2yaml",
+        "redhat.fabric8-analytics",
+        "vscjava.vscode-lombok"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "locale": "pt-BR",
+        "files.autoSave": "onFocusChange",
+        "maven.executable.path": "/usr/share/maven/bin/mvn",
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.shell.linux": "/bin/zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "env": {
+              "JAVA_HOME": "/opt/java/openjdk"
+            }
+          },
+          "zsh": {
+            "path": "/bin/zsh",
+            "env": {
+              "JAVA_HOME": "/opt/java/openjdk"
+            }
+          }
+        },
+        "java.jdt.ls.java.home": "/opt/java/openjdk",
+        "java.maven.downloadSources": true,
+        "maven.terminal.useJavaHome": true,
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-21",
+            "path": "/opt/java/openjdk",
+            "default": true
+          }
+        ]
+      }
+    }
+  },
+  "remoteUser": "root"
+}
