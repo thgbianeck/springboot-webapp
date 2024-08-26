@@ -1,0 +1,88 @@
+/* Importar fontes diretamente no CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+/* Configurações gerais */
+body {
+  background-color: #0d1117; /* Fundo escuro (inspirado no GitHub) */
+  color: #c9d1d9; /* Texto com contraste suave */
+  font-family: "Roboto", sans-serif; /* Fonte Roboto para o corpo do texto */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Estilo dos Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif; /* Fonte Montserrat para títulos */
+  margin-top: 0;
+  margin-bottom: 15px; /* Espaçamento inferior para títulos */
+  color: #ffffff; /* Texto branco para os títulos */
+}
+
+/* Links */
+a {
+  color: #58a6ff; /* Cor dos links (azul GitHub) */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding ajustado para espaçamento lateral */
+}
+
+/* Header */
+header {
+  background-color: #161b22; /* Fundo do header */
+  padding: 20px 0; /* Padding ajustado para espaçamento vertical */
+  border-bottom: 1px solid #21262d; /* Linha de separação */
+}
+
+.nav {
+  display: flex;
+  gap: 15px; /* Espaçamento entre itens do menu */
+}
+
+.nav a {
+  color: #c9d1d9;
+  padding: 10px 15px; /* Padding interno dos links do menu */
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #21262d; /* Fundo do link ao passar o mouse */
+}
+
+/* Main Content */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 40px 20px; /* Padding ajustado para espaçamento interno */
+  background-color: #0d1117;
+  margin-bottom: 20px; /* Margem inferior ajustada para espaçamento do conteúdo */
+}
+
+/* Footer */
+footer {
+  background-color: #161b22;
+  padding: 10px 20px; /* Padding ajustado para espaçamento interno */
+  text-align: center;
+  font-size: 0.9em;
+  color: #8b949e; /* Texto de cor suave */
+  border-top: 1px solid #21262d;
+  margin-top: 20px; /* Margem superior ajustada para espaçamento do rodapé */
+}

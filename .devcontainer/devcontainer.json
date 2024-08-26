@@ -48,7 +48,8 @@
         "aaron-bond.better-comments",
         "tanaka-x.prop2yaml",
         "redhat.fabric8-analytics",
-        "vscjava.vscode-lombok"
+        "vscjava.vscode-lombok",
+        "Postman.postman-for-vscode"
       ],
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -75,6 +76,7 @@
         "java.jdt.ls.java.home": "/opt/java/openjdk",
         "java.maven.downloadSources": true,
         "maven.terminal.useJavaHome": true,
+        "java.compile.nullAnalysis.mode": "automatic",
         "java.configuration.runtimes": [
           {
             "name": "JavaSE-21",

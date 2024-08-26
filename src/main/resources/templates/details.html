@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title th:text="${title}">Document</title>
+    <link rel="stylesheet" th:href="@{/css/github.css}" />
+    <style>
+      /* Estilos adicionais específicos para esta página */
+
+      body {
+        background-color: #0d1117;
+        color: #c9d1d9;
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-size: 2.5em;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background-color: #161b22;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        text-align: center;
+      }
+
+      li:hover {
+        background-color: #21262d;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hola Mundo Spring Boot</h1>
+    <div class="container">
+      <h1 th:text="${title}"></h1>
+      <ul>
+        <li th:text="${user.name}"></li>
+        <li th:text="${user.lastname}"></li>
+        <li th:if="${user.email}" th:text="${user.email}"></li>
+        <li th:if="${user.email == null}" th:text="${'no tiene email'}"></li>
+      </ul>
+    </div>
   </body>
 </html>
